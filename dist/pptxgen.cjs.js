@@ -2440,7 +2440,6 @@ function genXmlBodyProperties(slideObject) {
  * @returns XML containing the param object's text and formatting
  */
 function genXmlTextBody(slideObj) {
-  console.log('genXmlParagraphProperties');
     var opts = slideObj.options || {};
     var tmpTextObjects = [];
     var arrTextObjects = [];
