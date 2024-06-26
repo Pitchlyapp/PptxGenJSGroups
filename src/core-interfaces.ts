@@ -282,6 +282,7 @@ export interface TextBaseProps {
 				 * @example '25BA' // 'BLACK RIGHT-POINTING POINTER' (U+25BA)
 				 */
 				characterCode?: string
+        color?: string
 				/**
 				 * Indentation (space between bullet and text) (points)
 				 * @since v3.3.0
