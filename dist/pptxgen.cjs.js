@@ -3381,6 +3381,10 @@ function addImageDefinition(target, slide, opt) {
         hyperlink: null,
     };
     // FIRST: Set vars for this image (object param replaces positional args in 1.1.0)
+  console.log('addImage', opt);
+  if (opt.shapeName) {
+    newObject.options.shapeName = opt.shapeName;
+  }
     var intPosX = opt.x || 0;
     var intPosY = opt.y || 0;
     var intWidth = opt.w || 0;
