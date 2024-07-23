@@ -1660,6 +1660,7 @@ function slideItemObjsToXml(slideItemObjs, slide) {
                 break;
             case SLIDE_OBJECT_TYPES.text:
             case SLIDE_OBJECT_TYPES.placeholder:
+              console.log('slideItemObj', slideItemObj);
                 var shapeName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object" + (idx + 1);
                 // Lines can have zero cy, but text should not
                 if (!slideItemObj.options.line && cy === 0)
