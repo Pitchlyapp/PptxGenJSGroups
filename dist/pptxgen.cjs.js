@@ -1774,8 +1774,8 @@ function slideItemObjsToXml(slideItemObjs, slide) {
                 var sizing = slideItemObj.options.sizing, rounding = slideItemObj.options.rounding, width = cx, height = cy;
                 strSlideXml += '<p:pic>';
                 strSlideXml += '  <p:nvPicPr>';
-                let shapeName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object " + (idx + 1);
-                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name=' + shapeName + ' descr="' + encodeXmlEntities(slideItemObj.image) + '">';
+                let imageName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object " + (idx + 1);
+                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name=' + imageName + ' descr="' + encodeXmlEntities(slideItemObj.image) + '">';
                 if (slideItemObj.hyperlink && slideItemObj.hyperlink.url)
                     strSlideXml +=
                         '<a:hlinkClick r:id="rId' +
