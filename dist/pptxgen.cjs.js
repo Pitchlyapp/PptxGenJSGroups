@@ -1776,9 +1776,9 @@ function slideItemObjsToXml(slideItemObjs, slide) {
                 let imageName = slideItemObj.options.shapeName ? slideItemObj.options.shapeName : "Object " + (idx + 1);
                 console.log('imageName', imageName);
                 console.log('slideItemObj', slideItemObj);
-                console.log('    <p:cNvPr id="' + (idx + 2) + '" name="'+ imageName + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">');
-                console.log('    <p:cNvPr id="' + (idx + 2) + '" name="Object ' + (idx + 1) + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">');
-                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name="Object ' + (idx + 1) + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">';
+                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name="'+ imageName + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">';
+                //console.log('    <p:cNvPr id="' + (idx + 2) + '" name="Object ' + (idx + 1) + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">');
+                //strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name="Object ' + (idx + 1) + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">';
               if (slideItemObj.hyperlink && slideItemObj.hyperlink.url)
                     strSlideXml +=
                         '<a:hlinkClick r:id="rId' +
@@ -3498,7 +3498,7 @@ function addImageDefinition(target, slide, opt) {
         }
     }
     // STEP 6: Add object to slide
-  console.log('newObject', newObject);
+    //console.log('newObject', newObject);
     target._slideObjects.push(newObject);
 }
 /**
