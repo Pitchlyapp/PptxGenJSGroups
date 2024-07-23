@@ -3381,10 +3381,6 @@ function addImageDefinition(target, slide, opt) {
         hyperlink: null,
     };
     // FIRST: Set vars for this image (object param replaces positional args in 1.1.0)
-  console.log('addImage', opt);
-  if (opt.shapeName) {
-    newObject.options.shapeName = opt.shapeName;
-  }
     var intPosX = opt.x || 0;
     var intPosY = opt.y || 0;
     var intWidth = opt.w || 0;
@@ -3445,6 +3441,9 @@ function addImageDefinition(target, slide, opt) {
         flipV: opt.flipV || false,
         flipH: opt.flipH || false,
     };
+    if (opt.shapeName) {
+      newObject.options.shapeName = opt.shapeName;
+    }
     // STEP 4: Add this image to this Slide Rels (rId/rels count spans all slides! Count all images to get next rId)
     if (strImgExtn === 'svg') {
         // SVG files consume *TWO* rId's: (a png version and the svg image)
@@ -3499,6 +3498,7 @@ function addImageDefinition(target, slide, opt) {
         }
     }
     // STEP 6: Add object to slide
+  console.log('newObject', newObject);
     target._slideObjects.push(newObject);
 }
 /**
