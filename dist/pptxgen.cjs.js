@@ -1661,7 +1661,7 @@ function slideItemObjsToXml(slideItemObjs, slide) {
             case SLIDE_OBJECT_TYPES.text:
             case SLIDE_OBJECT_TYPES.placeholder:
               console.log('slideItemObj', slideItemObj);
-                var shapeName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object" + (idx + 1);
+                var shapeName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object " + (idx + 1);
                 // Lines can have zero cy, but text should not
                 if (!slideItemObj.options.line && cy === 0)
                     cy = EMU * 0.3;
@@ -1774,7 +1774,8 @@ function slideItemObjsToXml(slideItemObjs, slide) {
                 var sizing = slideItemObj.options.sizing, rounding = slideItemObj.options.rounding, width = cx, height = cy;
                 strSlideXml += '<p:pic>';
                 strSlideXml += '  <p:nvPicPr>';
-                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name="Object ' + (idx + 1) + '" descr="' + encodeXmlEntities(slideItemObj.image) + '">';
+                var shapeName = slideItemObj.options.shapeName ? encodeXmlEntities(slideItemObj.options.shapeName) : "Object " + (idx + 1);
+                strSlideXml += '    <p:cNvPr id="' + (idx + 2) + '" name=' + shapeName + ' descr="' + encodeXmlEntities(slideItemObj.image) + '">';
                 if (slideItemObj.hyperlink && slideItemObj.hyperlink.url)
                     strSlideXml +=
                         '<a:hlinkClick r:id="rId' +
