@@ -2,7 +2,7 @@ name: SAST
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ master, groups ]
 
 jobs:
   semgrep:
